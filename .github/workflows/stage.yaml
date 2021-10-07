@@ -20,5 +20,6 @@ jobs:
 
       - name: check
         run: |
-          git diff --name-only HEAD^ HEAD
+          git diff --name-only origin/dev origin/stage
+          cat version.txt
     

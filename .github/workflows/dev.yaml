@@ -2,6 +2,9 @@ on:
   push:
     branches:
       - dev
+    paths-ignore:
+      - version.txt
+
 
 name: dev-workflow
 jobs:
