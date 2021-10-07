@@ -20,5 +20,5 @@ jobs:
 
       - name: check
         run: |
-          dit diff --name-only HEAD^ HEAD
+          git diff --name-only HEAD^ HEAD
     
