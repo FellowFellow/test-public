@@ -3,7 +3,6 @@ on:
     branches:
       - dev
 
-
 name: dev-workflow
 jobs:
   version-update:
