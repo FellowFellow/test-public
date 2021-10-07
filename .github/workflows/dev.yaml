@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --global user.email "benedikt.liebs@fellow-consulting.de"
           git config --global user.name "FellowFellow"
-          echo ${{ env.NEXT_VERSION }} > ${{ env.CORE_VERSION_FILE}}
+          echo ${{ env.NEXT_VERSION }} > version.txt
           git add version.txt
           git tag ${{ env.NEXT_VERSION }} HEAD
           git commit -m "version update"
