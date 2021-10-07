@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - stage
+
+name: stage-workflow
+jobs: 
+
+  version-check:
+    runs-on: "ubuntu-20.04"
+    name: version-check
+    steps:
+      
+      # get git code
+      - name: Check out source repository
+        id: checkoutsourcerepo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GitPASSWORD }}
+
+      - name: check
+        run: |
+          dit diff --name-only HEAD^ HEAD
+    
