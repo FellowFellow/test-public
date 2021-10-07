@@ -35,8 +35,8 @@ jobs:
           git add version.txt
           git tag ${{ env.NEXT_VERSION }} HEAD
           git commit -m "version update"
-          git push
-          git push --tags
+          git push https://github.com/FellowFellow/test-public
+          git push https://github.com/FellowFellow/test-public --tags
 
 
 
